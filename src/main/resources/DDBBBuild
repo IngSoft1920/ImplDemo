@@ -1,0 +1,16 @@
+CREATE SCHEMA `ImplDemo` ;
+
+ALTER SCHEMA `ImplDemo`  DEFAULT CHARACTER SET utf8  DEFAULT COLLATE utf8_spanish_ci ;
+
+CREATE TABLE `ImplDemo`.`usuarios` (
+  `idUsuario` INT NOT NULL AUTO_INCREMENT,
+  `nombreUsuario` VARCHAR(45) NOT NULL,
+  `pwdHash` VARCHAR(45) NOT NULL,
+  `pwdSalt` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(120) NOT NULL,
+  `activo` TINYINT NOT NULL DEFAULT 0,
+  `fRegistro` DATETIME NOT NULL,
+  PRIMARY KEY (`idUsuario`),
+  UNIQUE INDEX `idUsuario_UNIQUE` (`idUsuario` ASC));
+  
+  
